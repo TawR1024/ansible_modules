@@ -1,3 +1,4 @@
+---
 ##
 ##
 ### TEST NETBOX CONNECTION FAILURE
@@ -32,7 +33,7 @@
         that:
           - test_one is failed
           - test_one['msg'] == "Failed to establish connection to Netbox API"
----
+
 ##
 ##
 ### NETBOX_DEVICE
