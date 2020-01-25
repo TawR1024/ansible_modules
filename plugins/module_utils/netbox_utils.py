@@ -439,7 +439,9 @@ class NetboxModule(object):
 
     def _connect_netbox_api(self, url, token, ssl_verify):
         try:
-            return pynetbox.api(url, token=token, ssl_verify=ssl_verify)
+            nb = pynetbox.api(url, token=token, ssl_verify=ssl_verify)
+            nb.version
+            return nb
         except Exception:
             self.module.fail_json(msg="Failed to establish connection to Netbox API")
 
